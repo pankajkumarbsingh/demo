@@ -1,0 +1,13 @@
+<h3>Employee List</h3>
+
+<div style="color: blue;" (click)="addEmployee()">Add employees</div>
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Salary</th>
+  </tr>
+  <tr *ngFor="let emp of employees">
+    <td>{{ emp.name }}</td>
+    <td>{{ emp.salary }}</td>
+  </tr>
+</table>
