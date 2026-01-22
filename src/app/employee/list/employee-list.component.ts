@@ -20,7 +20,7 @@ ngOnInit() {
 }
 
 getEmployees() {
-    debugger;
+    
   return this.employeeService.getEmployees().subscribe({
       next: data => this.employees = data,
       error: err => console.error(err)
