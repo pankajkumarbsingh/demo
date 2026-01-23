@@ -6,8 +6,7 @@
     "build": "ng build --configuration production",
     "postinstall": "npm run build",
     "ng": "ng",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "watch": "ng build --watch --configuration development"
   },
   "engines": {
     "node": ">=16.0.0"
