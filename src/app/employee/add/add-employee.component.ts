@@ -28,6 +28,7 @@ export class AddEmployeeComponent {
      console.log('Employee added:', data);
       this.name = '';
       this.salary = 0;
+      
     });
     
   }
