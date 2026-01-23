@@ -3,11 +3,13 @@ const path = require('path');
 
 const app = express();
 
-// IMPORTANT: correct dist folder name
-app.use(express.static(path.join(__dirname, 'dist/my-angular20-app')));
+const distPath = path.join(__dirname, 'dist/my-angular20-app');
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/my-angular20-app/index.html'));
+app.use(express.static(distPath));
+
+// Angular SPA fallback (Express 5 compatible)
+app.get(/.*/, (req, res) => {
+  res.sendFile(path.join(distPath, 'index.html'));
 });
 
 const port = process.env.PORT || 8080;
