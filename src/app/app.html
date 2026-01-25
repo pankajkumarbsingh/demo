@@ -1,4 +1,3 @@
-<div (click)="addEmployee()">Add Employee</div>
-<div (click)="viewEmployees()">View Employee</div>
-<div>testing</div>
+
+<app-login *ngIf="!authService.isLoggedIn()"></app-login>
 <router-outlet />
